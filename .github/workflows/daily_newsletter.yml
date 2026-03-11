@@ -2,7 +2,9 @@ name: Daily K-Trend Newsletter
 
 on:
   schedule:
+    # 한국 시간 아침 7시 = UTC 22시
     - cron: '0 22 * * *'
+  # 수동 실행 가능
   workflow_dispatch:
 
 jobs:
@@ -10,18 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 코드 체크아웃
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # Python 설정
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      # 현재 디렉토리 확인 (디버깅용)
+      - name: List files
+        run: |
+          ls -la
+          ls -la src/
+
+      # 의존성 설치
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
+      # 뉴스레터 생성
       - name: Generate Newsletter
         env:
           NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
@@ -31,3 +43,11 @@ jobs:
         run: |
           cd src
           python main.py
+
+      # 생성된 HTML 파일 저장 (Artifact)
+      - name: Upload newsletter
+        uses: actions/upload-artifact@v4
+        with:
+          name: newsletter
+          path: src/output/*.html
+          retention-days: 30
