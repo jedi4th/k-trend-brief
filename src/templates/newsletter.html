@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Trend Daily Brief</title>
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .header .date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Category Section */
+        .category {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .category:last-child {
+            border-bottom: none;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Source Section */
+        .source-section {
+            margin-bottom: 15px;
+        }
+        .source-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        /* Items */
+        .item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            transition: background 0.2s;
+        }
+        .item:hover {
+            background: #f0f0f0;
+        }
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .item-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .item-title a:hover {
+            text-decoration: underline;
+        }
+
+        .item-meta {
+            font-size: 12px;
+            color: #888;
+        }
+        .item-meta .source {
+            color: #667eea;
+            font-weight: 500;
+        }
+        .item-meta .stats {
+            margin-left: 10px;
+        }
+        .item-meta .region {
+            color: #10b981;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .item-meta .lang {
+            color: #888;
+            font-size: 11px;
+        }
+        .item-meta .views {
+            color: #ff4757;
+            font-weight: 500;
+        }
+
+        .item-summary {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        /* YouTube Thumbnail */
+        .video-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .video-thumbnail {
+            width: 120px;
+            height: 68px;
+            border-radius: 4px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .video-info {
+            flex: 1;
+        }
+
+        /* Empty State */
+        .empty-message {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .category {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🇰🇷 K-Trend Daily Brief</h1>
+            <div class="date">{{ date }}</div>
+        </div>
+
+        <!-- Categories -->
+        {% for category, items in newsletter.items() %}
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">{{ category_icons[category] }}</span>
+                {{ category }}
+            </div>
+
+            <!-- News (NewsData.io) -->
+            {% if items.news %}
+            <div class="source-section">
+                <div class="source-title">📰 News (NewsData.io)</div>
+                {% for item in items.news[:5] %}
+                <div class="item">
+                    <div class="item-title">
+                        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">{{ item.source }}</span>
+                        {% if item.pubDate %}
+                        <span class="stats">{{ item.pubDate[:10] }}</span>
+                        {% endif %}
+                    </div>
+                    {% if item.description %}
+                    <div class="item-summary">{{ item.description }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Reddit -->
+            {% if items.reddit %}
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                {% for item in items.reddit[:5] %}
+                <div class="item">
+                    <div class="item-title">
+                        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/{{ item.subreddit }}</span>
+                        <span class="stats">↑ {{ item.upvotes }} 💬 {{ item.comments }}</span>
+                    </div>
+                    {% if item.preview %}
+                    <div class="item-summary">{{ item.preview }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- YouTube -->
+            {% if items.youtube %}
+            <div class="source-section">
+                <div class="source-title">📺 YouTube</div>
+                {% for item in items.youtube[:3] %}
+                <div class="item">
+                    <div class="item-title">
+                        <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ {{ "{:,}".format(item.views) }}</span>
+                    </div>
+                    {% if item.thumbnail %}
+                    <div class="video-container">
+                        <img src="{{ item.thumbnail }}" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            {% if item.description %}
+                            <div class="item-summary">{{ item.description }}</div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <!-- Empty State -->
+            {% if not items.news and not items.reddit and not items.youtube %}
+            <div class="empty-message">
+                해당 카테고리의 수집된 콘텐츠가 없습니다.
+            </div>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>K-Trend Daily Brief | 매일 아침 전하는 K-콘텐츠 트렌드</p>
+            <p>GitHub: <a href="https://github.com/yourusername/k-trend-brief">k-trend-brief</a></p>
+        </div>
+    </div>
+</body>
+</html>

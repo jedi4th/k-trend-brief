@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Trend Daily Brief</title>
+    <style>
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .header .date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Category Section */
+        .category {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .category:last-child {
+            border-bottom: none;
+        }
+
+        .category-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Source Section */
+        .source-section {
+            margin-bottom: 15px;
+        }
+        .source-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        /* Items */
+        .item {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            transition: background 0.2s;
+        }
+        .item:hover {
+            background: #f0f0f0;
+        }
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 4px;
+            line-height: 1.4;
+        }
+        .item-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .item-title a:hover {
+            text-decoration: underline;
+        }
+
+        .item-meta {
+            font-size: 12px;
+            color: #888;
+        }
+        .item-meta .source {
+            color: #667eea;
+            font-weight: 500;
+        }
+        .item-meta .stats {
+            margin-left: 10px;
+        }
+        .item-meta .region {
+            color: #10b981;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        .item-meta .lang {
+            color: #888;
+            font-size: 11px;
+        }
+        .item-meta .views {
+            color: #ff4757;
+            font-weight: 500;
+        }
+
+        .item-summary {
+            font-size: 13px;
+            color: #666;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        /* YouTube Thumbnail */
+        .video-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .video-thumbnail {
+            width: 120px;
+            height: 68px;
+            border-radius: 4px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+        .video-info {
+            flex: 1;
+        }
+
+        /* Empty State */
+        .empty-message {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-style: italic;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+            .category {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🇰🇷 K-Trend Daily Brief</h1>
+            <div class="date">2026년 03월 11일 Wednesday</div>
+        </div>
+
+        <!-- Categories -->
+        
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">🎨</span>
+                K-CULTURE
+            </div>
+
+            <!-- News (NewsData.io) -->
+            
+
+            <!-- Reddit -->
+            
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/koreatravel/comments/1rpy5q8/korea_sijangpunk_not_cyberpunk/" target="_blank">Korea: Sijangpunk, not cyberpunk</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/koreatravel</span>
+                        <span class="stats">↑ 1 💬 0</span>
+                    </div>
+                    
+                    <div class="item-summary">I have gone to Suyu traditional market.
+This picture is the main gate of the market. 
+
+It has typical features of Korean traditional sijang(=market)
+(</div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- YouTube -->
+            
+            <div class="source-section">
+                <div class="source-title">📺 YouTube</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=0JCGDm9NqzI" target="_blank">a SEOUL TRAVEL GUIDE 🇰🇷 Where to GO & What to EAT 서울</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 875,444</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/0JCGDm9NqzI/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">✈️ Don't forget your Travel Insurance, this is the fantastic one I use - https://safetywing.com/nomad-insurance/?referenceID=24896498&campaign=sponsored-video---paddy&utm_campaign=sponsored-video---pa</div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=pqi-vT-5wXA" target="_blank">SOUTH KOREA TRAVEL VLOG: Experiencing the Korean Culture and more</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 636</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/pqi-vT-5wXA/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">(Subtitle is available in english)  Hey Fam! Finally my teenage dream of going to South Korea has been fulfilled *screams  Aside from the adventure, from the Cultural experience, to shopping, kdrama s</div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- Empty State -->
+            
+        </div>
+        
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">🎵</span>
+                K-POP
+            </div>
+
+            <!-- News (NewsData.io) -->
+            
+            <div class="source-section">
+                <div class="source-title">📰 News (NewsData.io)</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://koreajoongangdaily.joins.com/news/2026-03-10/entertainment/kpop/Kpop-kept-breaking-records-without-BTS-Now-the-benchmark-is-back/2538433" target="_blank">K-pop kept breaking records without BTS. Now the benchmark is back.</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">koreajoongangdaily_joins</span>
+                        
+                        <span class="stats">2026-03-09</span>
+                        
+                    </div>
+                    
+                    <div class="item-summary">A poster for BTS's ′′Arirang′′ performance livestream [NETFLIX] It is safe to say that BTS redefined what K-pop is capable of. The history of the seven-piece superstar has been marked by relentless ne</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.bostonglobe.com/2026/03/09/arts/k-pop-primer-for-newbies/" target="_blank">New to K-pop? Here’s a primer.</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">bostonglobe</span>
+                        
+                        <span class="stats">2026-03-09</span>
+                        
+                    </div>
+                    
+                    <div class="item-summary">A look at the music, visuals, and cultural forces shaping the bigger-than-ever genre right now.</div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- Reddit -->
+            
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/kpop/comments/1rphik2/bts_the_5th_album_arirang_official_merch/" target="_blank">BTS - The 5th Album: ARIRANG (Official Merch)</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/kpop</span>
+                        <span class="stats">↑ 875 💬 87</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/kpop/comments/1rpz45b/blackpinks_jisoo_to_receive_madame_figaro_rising/" target="_blank">BLACKPINK's Jisoo To Receive Madame Figaro Rising Star Award At Canneseries 2026</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/kpop</span>
+                        <span class="stats">↑ 77 💬 0</span>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/BTS/comments/13jti9e/looking_for_bts_news_discussion/" target="_blank">Looking for BTS news &amp; discussion?</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/BTS</span>
+                        <span class="stats">↑ 65 💬 0</span>
+                    </div>
+                    
+                    <div class="item-summary">## Head on over to r/bangtan! 
+
+# Want fanart, memes &amp; fluff? 
+
+## Head on over to r/heungtan! 
+
+### [See you there! 💜](https://media.tenor.com/lW</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/kpopthoughts/comments/1rp05mi/its_not_what_you_think_about_jisoo_kdrama/" target="_blank">It's not what you think about "jisoo kdrama boyfriend on demand"</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/kpopthoughts</span>
+                        <span class="stats">↑ 51 💬 52</span>
+                    </div>
+                    
+                    <div class="item-summary">First of all let me make myself clear I'm not a BLACKPINK's fan nor a hater nor a jisoo's fan. I'm a regular but picky kdrama fan. I 'm currently watc</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/BlackPink/comments/1rq09q8/260310_blackpinks_go_debuts_at_63_on_the/" target="_blank">260310 BLACKPINK’s “Go” debuts at #63 on the Billboard Hot 100 chart.</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/BlackPink</span>
+                        <span class="stats">↑ 48 💬 1</span>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- YouTube -->
+            
+
+            <!-- Empty State -->
+            
+        </div>
+        
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">📺</span>
+                K-DRAMA
+            </div>
+
+            <!-- News (NewsData.io) -->
+            
+
+            <!-- Reddit -->
+            
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KDRAMA/comments/1rmwkre/top_ten_korean_dramas_march_2026/" target="_blank">Top Ten Korean Dramas - March, 2026</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KDRAMA</span>
+                        <span class="stats">↑ 36 💬 42</span>
+                    </div>
+                    
+                    <div class="item-summary">Whether you are a veteran watcher or a complete newbie, you probably have a top 10 list floating in your head.
+
+Share your top 10 here and even better</div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- YouTube -->
+            
+
+            <!-- Empty State -->
+            
+        </div>
+        
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">🍜</span>
+                K-FOOD
+            </div>
+
+            <!-- News (NewsData.io) -->
+            
+
+            <!-- Reddit -->
+            
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanFood/comments/1rqaplb/im_addicted_to_kimchi_fried_rice/" target="_blank">I’m addicted to kimchi fried rice</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanFood</span>
+                        <span class="stats">↑ 201 💬 36</span>
+                    </div>
+                    
+                    <div class="item-summary">There’s also a fried egg hiding inside 😅</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanFood/comments/1rpwlj1/birthday_lunch_i_made_for_my_10yo/" target="_blank">Birthday lunch I made for my 10yo</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanFood</span>
+                        <span class="stats">↑ 163 💬 7</span>
+                    </div>
+                    
+                    <div class="item-summary">Egg roll, gim, canned peaches, white kimchi fried rice and sausages, doenjang soup with tofu, tteokbokki carbonara with oysters. The peaches are from </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanFood/comments/1rpjlbu/first_attempt_at_kimchi_jjigae/" target="_blank">First attempt at kimchi jjigae...</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanFood</span>
+                        <span class="stats">↑ 24 💬 7</span>
+                    </div>
+                    
+                    <div class="item-summary">Or any Korean dish for that matter. Kinda interesting because multiple of the videos/shorts I looked at, the creator specifically mentioned they eat t</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanFood/comments/1rprkxx/whats_your_favourite_ttukbaegi_dishes/" target="_blank">What’s your favourite ttukbaegi dishes?</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanFood</span>
+                        <span class="stats">↑ 20 💬 1</span>
+                    </div>
+                    
+                    <div class="item-summary">I really know nothing about Korean food. I got a ttukbaegi after I tasted some really good beef bulgogi stew from a random restaurant and have been ob</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanFood/comments/1rq4pcm/found_fuzzy_white_spots_on_homemade_radish_kimchi/" target="_blank">Found fuzzy white spots on homemade radish kimchi and I’m honestly confused.</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanFood</span>
+                        <span class="stats">↑ 0 💬 2</span>
+                    </div>
+                    
+                    <div class="item-summary">I’ve made this many times before so I’m familiar with the kimchi making process. About 6 weeks ago, I made a large tub of it. I usually transfer some </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- YouTube -->
+            
+            <div class="source-section">
+                <div class="source-title">📺 YouTube</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=yH_3S9mUTJE" target="_blank">대한민국 3대 실력자 닭강정, 떡볶이, 만두 길거리음식 달인? 완벽하게 맛있는 시장에서 제일 잘나가는 분식집 몰아보기 TOP7 Best Korean street food video</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 3,463,294</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/yH_3S9mUTJE/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">🎥 남는거 없이 막 퍼주는 시장 길거리음식 BEST 9?! 완벽하게 맛있는 시장에서 제일 잘나가는 닭강정, 떡볶이, 만두 몰아보기. TOP 7 Best Korean street food masters video  🧡 Information 🧡  00:00 시장 닭강정으로 빚 청산한 사장님네 가게? 하루 600인분도 팔리는! 줄서서 먹는 미친 퀄리티 닭강정 3</div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=_JIbF-y1l3o" target="_blank">면요리 끝판왕!! 한국인 최애 고기듬뿍 국수 요리 몰아보기 TOP 5 Legendary Korean Meat Bomb Noodles / Korean street food</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 1,482,227</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/_JIbF-y1l3o/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">면요리 끝판왕!! 한국인 최애 고기듬뿍 국수 요리 몰아보기 TOP 6 Legendary Korean Meat Bomb Noodles / Korean street food  0:00 서울 방이동 마차이 짬뽕, 압도적 고기폭탄 짬뽕   12:42 부산 광안리 융캉찌에, 대만식 고기폭탄 우육면  32:10 인천 을왕리 양자강, 웨이팅 폭주 왕갈비 짬뽕  51:5</div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=8jwZahp060U" target="_blank">TOP11, Korean Popular Food Collection</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 858,334</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/8jwZahp060U/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">TOP11, Korean Popular Food Collection  🔎 timeline chapter  00:00 Korean Popular Market Best Menu, Grilled Pork Entrails - Korean Street Food 🔗LINK : https://youtu.be/gfDFZ82N_jY  06:53 Korean Instant </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- Empty State -->
+            
+        </div>
+        
+        <div class="category">
+            <div class="category-title">
+                <span class="category-icon">💄</span>
+                K-BEAUTY
+            </div>
+
+            <!-- News (NewsData.io) -->
+            
+
+            <!-- Reddit -->
+            
+            <div class="source-section">
+                <div class="source-title">📱 Reddit</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanBeauty/comments/1rpvg7m/the_truth_about_30_lasers_in_seoul_highvolume_vs/" target="_blank">The truth about $30 lasers in Seoul: High-Volume vs. Boutique clinics explained (How to choose what's right for you)</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanBeauty</span>
+                        <span class="stats">↑ 81 💬 10</span>
+                    </div>
+                    
+                    <div class="item-summary">Living in Seoul and working in the K-beauty industry, I constantly see tourists posting their clinic itineraries here. 
+
+But I also see a lot of confu</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanBeauty/comments/1rootxi/where_to_get_korean_beauty_products_stores_in/" target="_blank">Where to get Korean Beauty products stores in Amsterdam?</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanBeauty</span>
+                        <span class="stats">↑ 17 💬 14</span>
+                    </div>
+                    
+                    <div class="item-summary">Hello guys, I need help getting a recommendation for places or online stores to get Korean skincare products. Ordering from the usual Olive Young take</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/AsianBeauty/comments/1rplm56/news_noteworthy_olive_young_new_product_brand/" target="_blank">[News] Noteworthy Olive Young New Product &amp; Brand Updates (2 Week of March)</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/AsianBeauty</span>
+                        <span class="stats">↑ 7 💬 2</span>
+                    </div>
+                    
+                    <div class="item-summary">As we move closer to summer, there seems to be a wider variety of sun care products being launched. It also looks like the demand for "makeup-enhancin</div>
+                    
+                </div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://reddit.com/r/KoreanBeauty/comments/1ro7sga/if_you_could_only_keep_3_skincare_3_makeup/" target="_blank">If you could only keep 3 skincare + 3 makeup products for the rest of your life, what would they be?</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">r/KoreanBeauty</span>
+                        <span class="stats">↑ 5 💬 4</span>
+                    </div>
+                    
+                    <div class="item-summary">I’m pretty new to Korean skincare and makeup and recently bought my first cushion foundation. I honestly didn’t expect to be so impressed by it — the </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- YouTube -->
+            
+            <div class="source-section">
+                <div class="source-title">📺 YouTube</div>
+                
+                <div class="item">
+                    <div class="item-title">
+                        <a href="https://www.youtube.com/watch?v=qR-v0qKeOtM" target="_blank">*Unsponsored* Morning Korean Skincare Routine and Everyday Makeup</a>
+                    </div>
+                    <div class="item-meta">
+                        <span class="source">YouTube</span>
+                        <span class="views">👁️ 297,966</span>
+                    </div>
+                    
+                    <div class="video-container">
+                        <img src="https://i.ytimg.com/vi/qR-v0qKeOtM/3.jpg" alt="thumbnail" class="video-thumbnail" onerror="this.style.display='none'">
+                        <div class="video-info">
+                            
+                            <div class="item-summary">Hey girlies! Hangout with me in this video where we get ready for the day and I do my morning skincare and everyday makeup. POP THE DESCRIPTION BOX OPEN FOR LINKS :) #unsponsored #koreanskincare    ✿ </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+
+            <!-- Empty State -->
+            
+        </div>
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>K-Trend Daily Brief | 매일 아침 전하는 K-콘텐츠 트렌드</p>
+            <p>GitHub: <a href="https://github.com/yourusername/k-trend-brief">k-trend-brief</a></p>
+        </div>
+    </div>
+</body>
+</html>
