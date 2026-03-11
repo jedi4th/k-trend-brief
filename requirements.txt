@@ -1,0 +1,13 @@
+# 데이터 수집 (무료)
+requests==2.31.0
+beautifulsoup4==4.12.2
+yt-dlp==2024.3.10
+
+# 데이터 처리
+python-dotenv==1.0.0
+
+# 이메일
+jinja2==3.1.2
+
+# 테스트 (선택)
+pytest==7.4.0
