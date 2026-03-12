@@ -5,5 +5,13 @@ collectors 패키지
 from .reddit_collector import RedditCollector
 from .newsdata_collector import NewsDataCollector
 from .youtube_collector import YouTubeCollector
+from .twitter_collector import TwitterCollector
+from .instagram_collector import InstagramCollector
 
-__all__ = ['RedditCollector', 'NewsDataCollector', 'YouTubeCollector']
+__all__ = [
+    'RedditCollector',
+    'NewsDataCollector',
+    'YouTubeCollector',
+    'TwitterCollector',
+    'InstagramCollector'
+]

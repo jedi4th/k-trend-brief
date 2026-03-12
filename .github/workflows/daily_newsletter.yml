@@ -22,6 +22,12 @@ jobs:
         with:
           python-version: '3.11'
 
+      # 현재 디렉토리 확인 (디버깅용)
+      - name: List files
+        run: |
+          ls -la
+          ls -la src/
+
       # 의존성 설치
       - name: Install dependencies
         run: |
@@ -30,6 +36,7 @@ jobs:
       # 뉴스레터 생성
       - name: Generate Newsletter
         env:
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENTS: ${{ secrets.RECIPIENTS }}
@@ -42,5 +49,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: newsletter
-          path: src/*.html
+          path: src/output/*.html
           retention-days: 30

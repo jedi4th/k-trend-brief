@@ -16,7 +16,9 @@ class RedditCollector:
     def __init__(self):
         self.base_url = "https://www.reddit.com"
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'application/json',
+            'Accept-Language': 'en-US,en;q=0.9',
         }
         print("✅ Reddit 수집기 초기화 완료 (API 키 불필요)")
 
